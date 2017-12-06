@@ -1,0 +1,46 @@
+<% include ./partials/header.ejs%>
+    <!--<div class="row">-->
+        <!--<div class="col-md-12">-->
+            <!--<form action="/forgot" method="POST">-->
+                <!--<legend>Forgot Password</legend>-->
+                <!--<div class="form-group">-->
+                    <!--<label for="email">Email</label>-->
+                    <!--<input type="email" name="email" autofocus class="form-control">-->
+                <!--</div>-->
+                <!--<div class="form-group">-->
+                    <!--<input type="submit" class="btn btn-primary" value="Reset Password">-->
+                <!--</div>-->
+            <!--</form>-->
+        <!--</div>-->
+    <!--</div>-->
+<div class="row register-main">
+    <div class="panel-heading">
+        <div class="panel-title text-center">
+            <h1 class="title">SimpleSell</h1>
+            <hr />
+        </div>
+    </div>
+    <div class="main-login main-center">
+        <form class="form-horizontal" method="post" action="/forgot">
+
+            <div class="form-group">
+                <label for="email" class="cols-sm-2 control-label">Your Email</label>
+                <div class="cols-sm-10">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                        <input type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
+                    </div>
+                    <small class="text-muted">To reset your password, submit your email address</small>
+                </div>
+            </div>
+
+            <div class="form-group ">
+                <button class="btn btn-primary btn-lg btn-block login-button">Reset password</button>
+            </div>
+            <div class="login-register">
+                <a href="/login">Login</a>
+            </div>
+        </form>
+    </div>
+</div>
+<% include ./partials/footer.ejs%>

@@ -1,0 +1,35 @@
+<% include ../partials/header.ejs %>
+<!--get parameter: items-->
+    <header class="jumbotron">
+        <div class="container">
+            <h1>Welcome To <span class="title">SimpleSell</span></h1>
+            <p class="slogan">View items with best price here!</p>
+            <p>
+                <a class="btn btn-primary btn-large" href="/items/new">Add New Item</a>
+            </p>
+        </div>
+    </header>
+
+    <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+        <% if(items.length==0){%>
+        <h2><span class="label label-default">No Match Found!</span></h2>
+        <% }%>
+        <% items.forEach(function(item){ %>
+        <div class="col-md-3 col-sm-6">
+            <div class="thumbnail">
+                <img src="<%= item.image %>">
+                <div class="caption">
+                    <h4><%= item.name %></h4>
+                    <label >Posted:<%= moment(item.createdAt).fromNow()%></label>
+                </div>
+                <hr>
+                <p>
+                    <a href="/items/<%= item._id %>" class="btn btn-primary">More Info</a>
+                </p>
+            </div>
+        </div>
+        <% }); %>
+    </div>
+
+
+<% include ../partials/footer.ejs %>

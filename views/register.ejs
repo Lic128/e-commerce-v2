@@ -1,0 +1,108 @@
+<% include ./partials/header.ejs %>
+<!--<div class="row">-->
+    <!--<h1 style="text-align: center"> Sign Up </h1>-->
+    <!--<div style="width: 30%; margin: 25px auto;">-->
+        <!--<form action="/register" method="post">-->
+            <!--<div class="form-group">-->
+                <!--<input class="form-control" type="text" name="username" placeholder="username">-->
+            <!--</div>-->
+            <!--<div class="form-group">-->
+                <!--<input class="form-control" type="password" name="password" placeholder="password">-->
+            <!--</div>-->
+            <!--<div class="form-group">-->
+                <!--<input class="form-control" type="text" name="firstName" placeholder="firstname">-->
+            <!--</div>-->
+            <!--<div class="form-group">-->
+                <!--<input class="form-control" type="text" name="lastName" placeholder="lastname">-->
+            <!--</div>-->
+            <!--<div class="form-group">-->
+                <!--<input class="form-control" type="email" name="email" placeholder="email">-->
+            <!--</div>-->
+            <!--<div class="form-group">-->
+                <!--<button class="btn btn-lg btn-primary btn-block">Sign Up</button>-->
+            <!--</div>-->
+        <!--</form>-->
+        <!--<a href="/items">Back</a>-->
+    <!--</div>-->
+<!--</div>-->
+
+<div class="row register-main">
+    <div class="panel-heading">
+        <div class="panel-title text-center">
+            <h1 class="register-title">SimpleSell</h1>
+            <!--<hr />-->
+        </div>
+    </div>
+    <div class="main-login main-center">
+        <form class="form-horizontal" action="/register" method="post">
+
+            <div class="form-group">
+                <label for="name" class="cols-sm-2 control-label">Username</label>
+                <div class="cols-sm-10">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                        <input type="text" class="form-control" name="username"  placeholder="Enter your Name"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email" class="cols-sm-2 control-label">Your Email</label>
+                <div class="cols-sm-10">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                        <input type="text" class="form-control" name="email"   placeholder="Enter your Email"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="firstName" class="cols-sm-2 control-label">First name</label>
+                <div class="cols-sm-10">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                        <input type="text" class="form-control" name="firstName"   placeholder="optional"/>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="lastName" class="cols-sm-2 control-label">Last name</label>
+                <div class="cols-sm-10">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                        <input type="text" class="form-control" name="lastName"   placeholder="optional"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="password" class="cols-sm-2 control-label">Password</label>
+                <div class="cols-sm-10">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                        <input type="password" class="form-control" name="password"   placeholder="Enter your Password"/>
+                    </div>
+                </div>
+            </div>
+
+            <!--<div class="form-group">-->
+                <!--<label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>-->
+                <!--<div class="cols-sm-10">-->
+                    <!--<div class="input-group">-->
+                        <!--<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>-->
+                        <!--<input type="password" class="form-control" name="confirm"  placeholder="Confirm your Password"/>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+
+            <div class="form-group ">
+                <button  class="btn btn-primary btn-lg btn-block login-button">Register</button>
+            </div>
+            <div class="login-register">
+                <a href="/login">Already a user? login</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<% include ./partials/footer.ejs %>

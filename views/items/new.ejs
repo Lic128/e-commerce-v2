@@ -1,0 +1,80 @@
+<% include ../partials/header.ejs %>
+<!--<div class="row">-->
+    <!--<h1 style="text-align: center">Create a New Item</h1>-->
+    <!--<div style="width: 30%; margin: 25px auto;">-->
+        <!--<form action="/items" method="POST" enctype="multipart/form-data">-->
+            <!--<div class="form-group">-->
+                <!--<input class="form-control" type="text" name="item[name]" placeholder="name">-->
+            <!--</div>-->
+
+            <!--<div class="form-group">-->
+                <!--<input class="form-control" type="number" name="item[price]" placeholder="price" step="0.01" min="0" required>-->
+            <!--</div>-->
+            <!--&lt;!&ndash;<div class="form-group">&ndash;&gt;-->
+                <!--&lt;!&ndash;<input class="form-control" type="text" name="item[description]" placeholder="description">&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+            <!--<div class="form-group">-->
+                <!--<label for="item[description]">Description</label>-->
+                <!--<textarea class="form-control" name="item[description]" rows="3"></textarea>-->
+            <!--</div>-->
+            <!--<div class="form-group ">-->
+                <!--<label class="btn btn-default btn-file">-->
+                    <!--Browse <input type="file" id="image" name="image" accept="image/*" required >-->
+                <!--</label>-->
+            <!--</div>-->
+            <!--<div class="form-group">-->
+                <!--<button class="btn btn-lg btn-primary btn-block">Submit!</button>-->
+            <!--</div>-->
+        <!--</form>-->
+        <!--<a href="/items">Go Back</a>-->
+    <!--</div>-->
+<!--</div>-->
+
+<div class="row register-main">
+    <div class="panel-heading">
+        <div class="panel-title text-center">
+            <h1 class="register-title">SimpleSell</h1>
+            <!--<hr />-->
+        </div>
+    </div>
+    <div class="main-login main-center">
+        <form class="form-horizontal" action="/items" method="POST" enctype="multipart/form-data">
+
+            <div class="form-group">
+                <label for="name" class="cols-md-3 control-label">Name</label>
+                    <div class="cols-md-9">
+                        <input type="text" class="form-control" name="item[name]"  placeholder="Name"/>
+                    </div>
+            </div>
+
+            <div class="form-group">
+                <label for="price" class="cols-md-3 control-label">Price</label>
+                    <div class="cols-md-9">
+                        <input class="form-control" type="number" name="item[price]" placeholder="Price" step="0.01" min="0" required />
+                    </div>
+            </div>
+
+            <div class="form-group">
+                <label class="cols-md-3 control-label" for="image">Image</label>
+                <div class="cols-md-9">
+                    <label class="btn btn-default btn-file">
+                        Browse <input type="file" id="image" name="image" accept="image/*" required style="display: none;">
+                    </label>
+                </div>
+
+            </div>
+            <div class="form-group">
+                <label class="cols-md-3 control-label" for="item[description]">Description</label>
+                <div class="cols-md-9">
+                    <textarea class="form-control"  name="item[description]" placeholder="Please enter your description here..." rows="5"></textarea>
+                </div>
+            </div>
+            <div class="form-group ">
+                <button  class="btn btn-primary btn-lg btn-block login-button">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<% include ../partials/footer.ejs %>

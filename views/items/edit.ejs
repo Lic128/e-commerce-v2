@@ -1,0 +1,75 @@
+<% include ../partials/header.ejs %>
+
+<!--res.render("items/edit", {item: foundItem})-->
+<!--req.body.item-->
+
+    <!--<div class="row">-->
+        <!--<h1 style="text-align: center">Edit <%=item.name %></h1>-->
+        <!--<div style="width: 30%; margin: 25px auto;">-->
+            <!--<form action="/items/<%= item._id %>?_method=PUT" method="POST">-->
+                <!--<div class="form-group">-->
+                    <!--<input class="form-control" type="text" name="item[name]" value="<%= item.name %>">-->
+                <!--</div>-->
+                <!--<div class="form-group">-->
+                    <!--<input class="form-control" type="text" name="item[image]" value="<%= item.image %>">-->
+                <!--</div>-->
+                <!--<div class="form-group">-->
+                    <!--<input class="form-control" type="number" name="item[price]" value="<%= item.price %>" step="0.01" min="0" required>-->
+                <!--</div>-->
+                <!--<div class="form-group">-->
+                    <!--<input class="form-control" type="text" name="item[description]" value="<%= item.description %>">-->
+                <!--</div>-->
+                <!--<div class="form-group">-->
+                    <!--<button class="btn btn-lg btn-primary btn-block">Submit!</button>-->
+                <!--</div>-->
+            <!--</form>-->
+            <!--<a href="/items">Go Back</a>-->
+        <!--</div>-->
+    <!--</div>-->
+
+<div class="row register-main">
+    <div class="panel-heading">
+        <div class="panel-title text-center">
+            <h1 class="register-title">Edit</h1>
+            <!--<hr />-->
+        </div>
+    </div>
+    <div class="main-login main-center">
+        <form class="form-horizontal" action="/items/<%= item._id %>?_method=PUT" method="POST">
+
+            <div class="form-group">
+                <label for="name" class="cols-md-3 control-label">Name</label>
+                <div class="cols-md-9">
+                    <input type="text" class="form-control" name="item[name]"  placeholder="Name" value="<%= item.name %>"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="price" class="cols-md-3 control-label">Price</label>
+                <div class="cols-md-9">
+                    <input class="form-control" type="number" name="item[price]" placeholder="Price" value="<%= item.price %>" step="0.01" min="0" required />
+                </div>
+            </div>
+
+            <!--<div class="form-group">-->
+                <!--<label class="cols-md-3 control-label" for="image">Image</label>-->
+                <!--<div class="cols-md-9">-->
+                    <!--<label class="btn btn-default btn-file">-->
+                        <!--Browse <input type="file" id="image" name="image" accept="image/*" required style="display: none;" value="<%= item.image%>">-->
+                    <!--</label>-->
+                <!--</div>-->
+
+            <!--</div>-->
+            <div class="form-group">
+                <label class="cols-md-3 control-label" for="item[description]">Description</label>
+                <div class="cols-md-9">
+                    <textarea class="form-control"  name="item[description]"  placeholder="<%= item.description %>" rows="5"></textarea>
+                </div>
+            </div>
+            <div class="form-group ">
+                <button  class="btn btn-primary btn-lg btn-block login-button">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+<% include ../partials/footer.ejs %>

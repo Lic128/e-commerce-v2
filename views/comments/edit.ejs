@@ -1,0 +1,39 @@
+<% include ../partials/header.ejs %>
+    <!--<div class="row">-->
+        <!--<h1 style="text-align: center">Edit Comment</h1>-->
+        <!--<div style="width: 30%; margin: 25px auto;">-->
+            <!--<form action="/items/<%= item_id %>/comments/<%= comment._id %>?_method=PUT" method="POST">-->
+                <!--<div class="form-group">-->
+                    <!--<input class="form-control" type="text" name="comment[text]" value="<%= comment.text %>">-->
+                <!--</div>-->
+                <!--<div class="form-group">-->
+                    <!--<button class="btn btn-lg btn-primary btn-block">Submit!</button>-->
+                <!--</div>-->
+            <!--</form>-->
+            <!--<a href="/items">Go Back</a>-->
+        <!--</div>-->
+    <!--</div>-->
+
+<div class="row register-main">
+    <div class="panel-heading">
+        <div class="panel-title text-center">
+            <h1 class="register-title">Edit Comment</h1>
+            <!--<hr />-->
+        </div>
+    </div>
+    <div class="main-login main-center">
+        <form class="form-horizontal" action="/items/<%= item_id %>/comments/<%= comment._id %>?_method=PUT" method="POST">
+
+            <div class="form-group">
+                <label class="cols-md-3 control-label" for="comment[text]">Text</label>
+                <div class="cols-md-9">
+                    <textarea class="form-control"  name="comment[text]" placeholder="<%= comment.text %>" rows="5" required></textarea>
+                </div>
+            </div>
+            <div class="form-group ">
+                <button  class="btn btn-primary btn-lg btn-block login-button">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+<% include ../partials/footer.ejs %>
