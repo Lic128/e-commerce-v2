@@ -26,9 +26,9 @@ var app = express();
 
 
 //mongoose setup
-const url = process.env.DATABASEURL || "mongodb://localhost/e-commerce";
-mongoose.connect(url);
-
+// const url = process.env.DATABASEURL || "mongodb://localhost/e-commerce";
+mongoose.connect("mongodb://LiyanChen:362502Cly@ds133746.mlab.com:33746/e-commercial");
+//mongodb://<LiyanChen>:<362502Cly>@ds133746.mlab.com:33746/e-commercial
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

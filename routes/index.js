@@ -38,7 +38,7 @@ router.post("/register", (req, res)=>{
         return res.render("register",{error: err.message});
     }
     passport.authenticate("local")(req, res, ()=>{
-      req.flash("success", "Welcome to main title, "+user.username);
+      req.flash("success", "Welcome to SimpleSell, "+user.username);
       res.redirect("/items");
     });
   });
@@ -58,7 +58,7 @@ router.post("/login", passport.authenticate("local",
         successRedirect: "/items",
         failureRedirect: "/login",
         failureFlash: true,
-        successFlash: "You have Logged In!"
+        successFlash: " Welcome back!"
     }), (req, res)=>{
     }
 )
