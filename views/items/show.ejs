@@ -22,9 +22,12 @@
                     <hr>
                     <blockquote><%= item.description %></blockquote>
                     <hr>
-                    <span class="pull-right">
+                    <span class="pull-right label label-default">
                         <em>Posted:<%= moment(item.createdAt).fromNow()%></em>
                     </span>
+                    <form>
+
+                    </form>
                     <% if(currentUser && item.author.id.equals(currentUser._id)){ %>
                     <a class="btn btn-xs btn-warning" href="/items/<%= item._id %>/edit">Edit</a>
                     <form id="delete-form" action="/items/<%= item._id %>?_method=DELETE" method="POST">

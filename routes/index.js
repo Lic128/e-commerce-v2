@@ -74,7 +74,7 @@ router.post("/login", passport.authenticate("local",
 router.get("/logout", (req, res)=>{
     req.logout();
     req.flash("success", "See you next time!");
-    res.redirect("/items");
+    res.redirect("back");
 });
 
 /**Reset Password Route**/

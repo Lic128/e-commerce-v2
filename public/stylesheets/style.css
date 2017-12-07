@@ -26,10 +26,13 @@ a {
   box-shadow: 0 8px 6px -6px #999;
 }
 .thumbnail hr{
-  margin: 6px;
+  margin-top: 0px;
+  margin-bottom: 6px;
 }
+
 .thumbnail .caption-full {
-  padding: 6px;
+  padding: 10px;
+  margin-bottom: 5px;
 }
 .navbar-brand{
   font-family: Satisfy, cursive;
