@@ -108,8 +108,8 @@ router.post("/forgot", (req, res, next)=>{
             var smtpTransport= nodemailer.createTransport({
                 service: "Gmail",
                 auth:{
-                    user:'liyanchen128@gmail.com',// your own account
-                    pass: "362502Cly"// you own password
+                    user:'test@gmail.com',// your own account
+                    pass: "test"// you own password
                 }
             });
             const mailOptions={
@@ -173,13 +173,13 @@ router.post('/reset/:token', (req, res)=>{
             var smtpTransport = nodemailer.createTransport({
                 service: 'Gmail',
                 auth: {
-                    user: 'liyanchen128@gmail.com',
-                    pass: "362502Cly"
+                    user: 'test',
+                    pass: "test"
                 }
             });
             const mailOptions = {
                 to: user.email,
-                from: 'liyanchen128@gmail.com',
+                from: 'test@gmail.com',
                 subject: 'Your password has been changed',
                 text: 'Hello,\n\n' +
                 'This is a confirmation that the password for your account ' + user.email + ' has just been changed.\n'
